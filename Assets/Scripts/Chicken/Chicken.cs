@@ -11,9 +11,9 @@ public enum ChickenState
 }
 
 public class Chicken : MonoBehaviour {
-	const int CHANGE_DIRECTION_TIME = 1500; // in ms
+	const float CHANGE_DIRECTION_TIME = 1500; // in ms
 
-	int changeDirectionTime;
+	float changeDirectionTime;
 	ChickenState state;
 	GameObject holder;
 
@@ -57,7 +57,6 @@ public class Chicken : MonoBehaviour {
 	void UpdateRunning()
 	{
 		changeDirectionTime -= Time.deltaTime;
-		if (changeDirectionTime < -
 	}
 
 	void UpdateHeld()
