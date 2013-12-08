@@ -170,14 +170,14 @@ function Update () {
 			cChicken.rigidbody.velocity+=Utilities.Vector2To3(punchDir)*2f;
 		}
 		
-		//punchHitbox.enabled=true;
+		punchHitbox.enabled=true;
 		punchHitTimer-=Time.deltaTime;
 		
 		if(animator) {
 			animator.SetBool("IsPunching", true);
 		}
 	} else {
-		//punchHitbox.enabled=false;
+		punchHitbox.enabled=false;
 		if (punchCooldown>0f) {
 			bodyGraphic.material.color=bodyCooldownColor;
 			punchCooldown-=Time.deltaTime;
