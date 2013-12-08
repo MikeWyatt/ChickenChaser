@@ -70,6 +70,7 @@ function Update () {
 	// Grab movement axis
 	var inputDir:Vector2=new Vector2(Input.GetAxis(inputPrefix+"Horizontal"),Input.GetAxis(inputPrefix+"Vertical"))*2f;
 	if (stunTimer>0f) {
+		//I AM STUNNED
 		stunTimer-=Time.deltaTime;
 		if (stunTimer<0f) {
 			stunTimer=0f;

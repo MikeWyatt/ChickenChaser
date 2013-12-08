@@ -114,6 +114,7 @@ function Update () {
 			if (allPlayers[i]!= gameObject.GetComponent(PlayerMovement)) {
 				var attackVector:Vector3=allPlayers[i].myCollider.transform.position-punchHitbox.transform.position;
 				if (attackVector.magnitude<punchRadius) {
+					//I JUST PUNCHED SOMEONE
 					allPlayers[i].position+=punchDir*punchKnockback;
 					allPlayers[i].stunTimer=1f;
 					hitPlayer=true;
@@ -124,6 +125,11 @@ function Update () {
 		for (i=0;i<chickenHits.length;i++) {
 			cChicken=chickenHits[i].GetComponent(Chicken);
 			cChicken.rigidbody.velocity+=Utilities.Vector2To3(punchDir)*2f;
+			hitPlayer=true;
+		}
+		
+		if (hitPlayer==false) {
+			//A SWING AND A MISS
 		}
 		
 		//punchHitbox.enabled=true;
