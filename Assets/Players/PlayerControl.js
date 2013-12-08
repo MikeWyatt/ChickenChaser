@@ -1,5 +1,6 @@
 #pragma strict
 
+var playerIndex:int;
 var moveSpeed:float;
 var movementSmooth:float;
 var turnSmooth:float;
@@ -17,8 +18,6 @@ var bodyCooldownColor:Color;
 var position:Vector2;
 @HideInInspector
 var inputPrefix:String;
-@HideInInspector
-var playerIndex:int;
 
 private var facingDirection:Vector3;
 private var punchTimer:float=0f;
@@ -39,7 +38,6 @@ function Start () {
 	
 	bodyStartingColor=bodyGraphic.material.color;
 	position=Utilities.Vector3To2(transform.position);
-	playerIndex=0;
 	inputPrefix="P"+(playerIndex+1);
 }
 
