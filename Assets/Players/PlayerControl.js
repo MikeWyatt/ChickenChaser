@@ -1,5 +1,7 @@
 #pragma strict
 
+import System.Collections.Generic;
+
 var playerIndex:int;
 var moveSpeed:float;
 var movementSmooth:float;
@@ -7,6 +9,7 @@ var turnSmooth:float;
 var fenceWidth:float;
 var bodyGraphic:Renderer;
 var punchHitbox:Renderer;
+var myCollider:Collider;
 var maxPunchCharge:float;
 var punchHitTime:float;
 var punchMinCooldown:float;
@@ -18,6 +21,10 @@ var bodyCooldownColor:Color;
 var position:Vector2;
 @HideInInspector
 var inputPrefix:String;
+@HideInInspector
+var health:float=1f;
+@HideInInspector
+var stunTimer:float=0f;
 
 private var facingDirection:Vector3;
 private var punchTimer:float=0f;
@@ -29,9 +36,18 @@ private var bodyStartingColor:Color;
 
 static var playBounds:Rect;
 static var doneInit:boolean=false;
+static var allPlayers:List.<PlayerControl>;
 
 function Start () {
 	var i:int;
+	
+	if (doneInit==false) {
+		allPlayers=new List.<PlayerControl>();
+	}
+	allPlayers.Add(this);
+
+	facingDirection=(-transform.position);
+	
 	/*if (doneInit==false) {
 		doneInit=true;
 		fenceRadius=FenceControl.staticFenceRadius;
@@ -61,6 +77,7 @@ function Start () {
 }
 
 function Update () {
+	var i:int;
 	var inputDir:Vector2=new Vector2(Input.GetAxis(inputPrefix+"Horizontal"),Input.GetAxis(inputPrefix+"Vertical"))*2f;
 	if (inputDir.magnitude>1f) inputDir=inputDir.normalized;
 	if (inputDir.magnitude>0f) {
@@ -95,6 +112,11 @@ function Update () {
 			punchHitTimer=punchHitTime;
 			punchStrength=1f;
 			punchCooldown=punchMaxCooldown;
+			for (i=0;i<allPlayers.Count;i++) {
+				if (allPlayers[i]!=this) {
+					
+				}
+			}
 		}
 		/*if (punching==false) {
 			if (punchCooldown<=0f) {

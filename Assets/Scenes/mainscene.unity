@@ -504,6 +504,7 @@ MonoBehaviour:
   fenceWidth: .649999976
   bodyGraphic: {fileID: 687458998}
   punchHitbox: {fileID: 74011451}
+  myCollider: {fileID: 0}
   maxPunchCharge: 1.5
   punchHitTime: .0500000007
   punchMinCooldown: .200000003
@@ -512,6 +513,8 @@ MonoBehaviour:
   bodyCooldownColor: {r: .220047608, g: .489728242, b: .544117689, a: 1}
   position: {x: 0, y: 0}
   inputPrefix: 
+  health: 1
+  stunTimer: 0
 --- !u!1 &285950419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,6 +1326,7 @@ MonoBehaviour:
   fenceWidth: .649999976
   bodyGraphic: {fileID: 1643477493}
   punchHitbox: {fileID: 1449277299}
+  myCollider: {fileID: 0}
   maxPunchCharge: 1.5
   punchHitTime: .0500000007
   punchMinCooldown: .200000003
@@ -1331,6 +1335,8 @@ MonoBehaviour:
   bodyCooldownColor: {r: .220047608, g: .489728242, b: .544117689, a: 1}
   position: {x: 0, y: 0}
   inputPrefix: 
+  health: 1
+  stunTimer: 0
 --- !u!4 &1390112838
 Transform:
   m_ObjectHideFlags: 0
