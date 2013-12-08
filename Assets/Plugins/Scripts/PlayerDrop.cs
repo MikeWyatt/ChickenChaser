@@ -3,6 +3,9 @@ using System.Collections;
 
 public class PlayerDrop : MonoBehaviour {
 
+	public PlayerScore Score;
+	public ParticleSystem Particles;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -22,6 +25,9 @@ public class PlayerDrop : MonoBehaviour {
 
 		Destroy(collider.gameObject);
 
-		//increment score for thrownBehavior.Thrower
+		Score.Value++;
+		Debug.Log (string.Format ("Player {0} scores!", Score.gameObject.name));
+		ParticleSystem go = (ParticleSystem)Instantiate(Particles);
+		go.transform.parent = transform;
 	}
 }
