@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ThrownBehavior : MonoBehaviour {
+public class ThrownBehavior : MonoBehaviour, IChickenBehavior {
 
 	// Use this for initialization
 	void Start () {
