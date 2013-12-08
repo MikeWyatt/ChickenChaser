@@ -191,7 +191,7 @@ function Update () {
 		if (Input.GetButtonDown(inputPrefix+"Fire2")) {
 			grabbedChicken.ChangeBehavior.<ThrownBehavior>();
 			grabbedChicken.GetComponent(HeldBehavior).Holder=null;
-			grabbedChicken.rigidbody.velocity.y=0f;
+			grabbedChicken.rigidbody.velocity.y=1f;
 			grabbedChicken.GetComponent(ThrownBehavior).SetThrowArc();
 			grabbedChicken=null;
 		}

@@ -22,7 +22,12 @@ public class ThrownBehavior : MonoBehaviour, IChickenBehavior {
 	
 	// Update is called once per frame
 	void Update () {
-		gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, endPos, 2f*Time.deltaTime);
+		endPos.y=transform.position.y;
+		gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, endPos, 2.5f*Time.deltaTime);
+		if (gameObject.transform.position.y<.05f) {
+			gameObject.transform.position=new Vector3(transform.position.x,0f,transform.position.z);
+			GetComponent<Chicken>().ChangeBehavior<RunningBehavior>();
+		}
 	}
 	
 }
