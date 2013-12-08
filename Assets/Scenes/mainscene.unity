@@ -5625,7 +5625,13 @@ MonoBehaviour:
   - {fileID: 1390112845}
   - {fileID: 939729747}
   - {fileID: 1175642181}
+  MaxScore: 7
   PauseTexture: {fileID: 2800000, guid: 213634e573ce9f74eb6b35e6f9e386f6, type: 3}
+  WinTextures:
+  - {fileID: 2800000, guid: 49428ba1581868a4382b0f30d8a59826, type: 3}
+  - {fileID: 2800000, guid: 7335aad4ebacf774da81fa6478dfdcc7, type: 3}
+  - {fileID: 2800000, guid: bded184f0bbd3964da5e239f672938ec, type: 3}
+  - {fileID: 2800000, guid: be48fb535343acf438816dc85a3b2f16, type: 3}
 --- !u!4 &1198406398
 Transform:
   m_ObjectHideFlags: 0

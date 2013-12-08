@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce27b6d1ae2cd2b42ac2dc38799f43f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1
+  Speed: 4
   EscapeRadius: 15
   PlayerAvoidanceWeight: 6
   PlayerAvoidanceMinRadius: 1.5
