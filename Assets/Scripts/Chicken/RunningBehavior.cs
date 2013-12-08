@@ -10,12 +10,13 @@ public class RunningBehavior : MonoBehaviour, IChickenBehavior {
 	public string EscapeZoneTag = "Escape Zone";
 
 	void Start () {
-//		escapeZones = FindObjectsOfType<Collider>()
-//			.Select(c => c.gameObject)
-//			//.Where(go => go.CompareTag(EscapeZoneTag))
-//			.ToArray();
+		escapeZones = FindObjectsOfType<Collider>()
+			.Select(c => c.gameObject)
+			.Where(go => go.CompareTag(EscapeZoneTag))
+			.ToArray();
 //
-//		Debug.Log (escapeZones);
+//		Debug.Log(string.Format ("all colliders: {0}", FindObjectsOfType<Collider>().Select ()));
+		Debug.Log (escapeZones);
 		//		//EscapeZoneTag
 //
 //		if(EscapeZones.Count() == 0) {
