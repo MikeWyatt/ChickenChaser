@@ -1,5 +1,7 @@
 #pragma strict
 
+@script RequireComponent(AudioSource)
+
 import System.Collections.Generic;
 
 var playerIndex:int;
@@ -17,7 +19,9 @@ var punchRadius:float;
 var punchKnockback:float;
 var bodyPunchColor:Color;
 var bodyCooldownColor:Color;
+var runningSound: AudioSource;
 var animator:Animator;
+
 
 @HideInInspector
 var position:Vector2;
@@ -36,6 +40,7 @@ private var punchHitTimer:float=0f;
 private var punchStrength:float;
 private var bodyStartingColor:Color;
 private var grabbedChicken:Chicken;
+ 
 
 static var playBounds:Rect;
 static var doneInit:boolean=false;
@@ -89,10 +94,21 @@ function Update () {
 	if (inputDir.magnitude>1f) inputDir=inputDir.normalized;
 	if (inputDir.magnitude>0f) {
 		facingDirection=Utilities.Vector2To3(inputDir);
+
+		if (!runningSound.isPlaying){
+			runningSound.Play();
+		}
 	}
+	else{
+
+		runningSound.Pause();
+	}
+
+
 	
 	if(animator) {
 		animator.SetBool("IsRunning", inputDir.magnitude>0f);
+		
 	}
 	
 	transform.rotation=Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(facingDirection,Vector3.up),turnSmooth*Time.deltaTime);
