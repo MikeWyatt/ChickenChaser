@@ -18,7 +18,7 @@ RenderSettings:
   m_FogDensity: .00999999978
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientLight: {r: 0, g: 0, b: 0, a: 0}
+  m_AmbientLight: {r: .658620715, g: .658620715, b: .658620715, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: .5
   m_FlareStrength: 1
@@ -1868,7 +1868,7 @@ SkinnedMeshRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 09afd89529176294288d4956268547fb, type: 2}
+  - {fileID: 2100000, guid: de5ad643a50e35f49aed4fadf309c541, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1960,7 +1960,7 @@ Light:
   serializedVersion: 3
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: .5
+  m_Intensity: .200000003
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -2633,6 +2633,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: de5ad643a50e35f49aed4fadf309c541, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_RootGameObject: {fileID: 1390112836}
@@ -3674,7 +3678,7 @@ SkinnedMeshRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 09afd89529176294288d4956268547fb, type: 2}
+  - {fileID: 2100000, guid: de5ad643a50e35f49aed4fadf309c541, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3802,6 +3806,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.64195001
       objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 49337bcc9bd3dec4eaad98c5d358897f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: de5ad643a50e35f49aed4fadf309c541, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49337bcc9bd3dec4eaad98c5d358897f, type: 3}
   m_RootGameObject: {fileID: 1200877234}
