@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SpawnBehavior : ChickenBehavior {
+public class SpawnBehavior : MonoBehaviour, IChickenBehavior {
 	const float INIT_DISTANCE = 2.0f;
 
 	MoveWaypoints mover;
 
-	void Awake()
+	void Start()
 	{
-		mover.Clear();
 		mover = gameObject.GetComponent<MoveWaypoints>();
+		mover.Clear();
 
 		Vector3 startMove = new Vector3(Random.Range(-10, 10)
 		                            , Random.Range(-10, 10)

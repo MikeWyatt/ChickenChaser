@@ -3,14 +3,20 @@ using System.Collections.Generic;
 
 public class MoveWaypoints : MonoBehaviour {
 	public float speed = 5.0f;
+	public float reachedDestDist = 0.2f;
 
 	Queue<Vector3> waypoints;
 	Vector3 destination;
 	Vector3 direction;
 
+	void Awake()
+	{
+		waypoints = new Queue<Vector3>();
+		destination = Vector3.zero;
+	}
+
 	void Start()
 	{
-		destination = Vector3.zero;
 		direction = destination - transform.position;
 	}
 
@@ -32,7 +38,7 @@ public class MoveWaypoints : MonoBehaviour {
 		{
 			transform.position += direction * speed * Time.deltaTime;
 			Vector3 distToDest = destination - gameObject.transform.position;
-			if (distToDest.magnitude <= 0.1)
+			if (distToDest.magnitude <= reachedDestDist)
 			{
 				//destination reached
 				destination = Vector3.zero;
