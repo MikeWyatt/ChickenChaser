@@ -2595,7 +2595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49a3992d84f8634089dff463f7a1766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIndex: 1
+  playerIndex: 0
   bodyGraphic: {fileID: 2002529885}
   punchHitbox: {fileID: 650914930}
   myCollider: {fileID: 365391389}
@@ -2625,7 +2625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be48f3bf3cee1a448db07e5ebbb9784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIndex: 1
+  playerIndex: 0
   bodyGraphic: {fileID: 2002529885}
   stunColor: {r: .396178871, g: .742647052, b: .196583048, a: 0}
   moveSpeed: 6
@@ -2663,7 +2663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16fec47779624d14f98d4df49c74df8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIndex: 1
+  playerIndex: 0
   punchHitbox: {fileID: 650914930}
   animator: {fileID: 1460236427}
   inputPrefix: 
@@ -3241,15 +3241,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: playerIndex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: playerIndex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400006, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: playerIndex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400006, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: swishSound
