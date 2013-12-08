@@ -840,7 +840,7 @@ GameObject:
   - 65: {fileID: 285950421}
   - 23: {fileID: 285950420}
   m_Layer: 0
-  m_Name: Southeast Player Drop
+  m_Name: Player 2 Drop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1509,7 +1509,7 @@ GameObject:
   - 65: {fileID: 495430171}
   - 23: {fileID: 495430170}
   m_Layer: 0
-  m_Name: Northeast Player Drop
+  m_Name: Player 1 Drop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1632,7 +1632,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .595629692
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1640,7 +1640,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 5.67069817
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1648,7 +1648,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -.923879564
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalRotation.z
@@ -1656,7 +1656,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: .382683456
       objectReference: {fileID: 0}
     - target: {fileID: 11400006, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: hitSound
@@ -1666,10 +1666,17 @@ Prefab:
       propertyPath: swishSound
       value: 
       objectReference: {fileID: 1390112842}
+<<<<<<< HEAD
     - target: {fileID: 11400006, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: featherPoofEffect
       value: 
       objectReference: {fileID: 100000, guid: 959128634bd8319499709a7c4feb073f, type: 2}
+=======
+    - target: {fileID: 100074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
+      propertyPath: m_Name
+      value: Player 1
+      objectReference: {fileID: 0}
+>>>>>>> 60b23ae40f1d8c174c435497152be9d8b41dce05
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_RootGameObject: {fileID: 1390112836}
@@ -1821,7 +1828,7 @@ GameObject:
   - 65: {fileID: 543122140}
   - 23: {fileID: 543122139}
   m_Layer: 0
-  m_Name: Southwest Player Drop
+  m_Name: Player 3 Drop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2566,7 +2573,7 @@ GameObject:
   - 82: {fileID: 782447531}
   - 82: {fileID: 782447530}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2578,8 +2585,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_PrefabInternal: {fileID: 855525718}
   m_GameObject: {fileID: 782447524}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.94672108, y: 0, z: -2.93264198}
+  m_LocalRotation: {x: 0, y: .923879564, z: 0, w: .382683456}
+  m_LocalPosition: {x: -7.44206715, y: 0, z: 7.68790483}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1216018265}
@@ -3218,7 +3225,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.94672108
+      value: -7.44206715
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3226,7 +3233,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -2.93264198
+      value: 7.68790483
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3234,7 +3241,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: .923879564
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalRotation.z
@@ -3242,7 +3249,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: .382683456
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: playerIndex
@@ -3264,10 +3271,17 @@ Prefab:
       propertyPath: hitSound
       value: 
       objectReference: {fileID: 782447531}
+<<<<<<< HEAD
     - target: {fileID: 11400006, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: featherPoofEffect
       value: 
       objectReference: {fileID: 100000, guid: 959128634bd8319499709a7c4feb073f, type: 2}
+=======
+    - target: {fileID: 100074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
+      propertyPath: m_Name
+      value: Player 0
+      objectReference: {fileID: 0}
+>>>>>>> 60b23ae40f1d8c174c435497152be9d8b41dce05
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_RootGameObject: {fileID: 782447524}
@@ -3727,7 +3741,7 @@ GameObject:
   - 82: {fileID: 939729744}
   - 82: {fileID: 939729745}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3739,8 +3753,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_PrefabInternal: {fileID: 969907808}
   m_GameObject: {fileID: 939729738}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.03599453, y: 0, z: -3.08242989}
+  m_LocalRotation: {x: 0, y: -.382683486, z: 0, w: .923879564}
+  m_LocalPosition: {x: 7.5, y: 0, z: -7.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 866698470}
@@ -4153,7 +4167,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6.03599453
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4161,7 +4175,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -3.08242989
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4169,7 +4183,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -.382683486
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalRotation.z
@@ -4177,7 +4191,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: .923879564
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: playerIndex
@@ -4199,10 +4213,17 @@ Prefab:
       propertyPath: hitSound
       value: 
       objectReference: {fileID: 939729744}
+<<<<<<< HEAD
     - target: {fileID: 11400006, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: featherPoofEffect
       value: 
       objectReference: {fileID: 100000, guid: 959128634bd8319499709a7c4feb073f, type: 2}
+=======
+    - target: {fileID: 100074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
+      propertyPath: m_Name
+      value: Player 2
+      objectReference: {fileID: 0}
+>>>>>>> 60b23ae40f1d8c174c435497152be9d8b41dce05
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_RootGameObject: {fileID: 939729738}
@@ -5217,7 +5238,7 @@ GameObject:
   - 82: {fileID: 1175642179}
   - 82: {fileID: 1175642178}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5229,8 +5250,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_PrefabInternal: {fileID: 1337724288}
   m_GameObject: {fileID: 1175642172}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.03599453, y: 0, z: 3.22192955}
+  m_LocalRotation: {x: 0, y: .382683486, z: 0, w: .923879564}
+  m_LocalPosition: {x: -7.5, y: 0, z: -7.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 436443164}
@@ -5823,7 +5844,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6.03599453
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5831,7 +5852,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 3.22192955
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalRotation.x
@@ -5839,7 +5860,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: .382683486
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalRotation.z
@@ -5847,7 +5868,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: .923879564
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: playerIndex
@@ -5869,10 +5890,17 @@ Prefab:
       propertyPath: swishSound
       value: 
       objectReference: {fileID: 1175642178}
+<<<<<<< HEAD
     - target: {fileID: 11400006, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: featherPoofEffect
       value: 
       objectReference: {fileID: 100000, guid: 959128634bd8319499709a7c4feb073f, type: 2}
+=======
+    - target: {fileID: 100074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
+      propertyPath: m_Name
+      value: Player 3
+      objectReference: {fileID: 0}
+>>>>>>> 60b23ae40f1d8c174c435497152be9d8b41dce05
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_RootGameObject: {fileID: 1175642172}
@@ -6289,7 +6317,7 @@ GameObject:
   - 82: {fileID: 1390112843}
   - 82: {fileID: 1390112842}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6317,8 +6345,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_PrefabInternal: {fileID: 510652322}
   m_GameObject: {fileID: 1390112836}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .595629692, y: 0, z: 5.67069817}
+  m_LocalRotation: {x: 0, y: -.923879564, z: 0, w: .382683456}
+  m_LocalPosition: {x: 7.5, y: 0, z: 7.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1860999337}
@@ -7913,7 +7941,7 @@ GameObject:
   - 65: {fileID: 1741730780}
   - 23: {fileID: 1741730779}
   m_Layer: 0
-  m_Name: Northwest Player Drop
+  m_Name: Player 0 Drop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
