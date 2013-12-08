@@ -143,13 +143,13 @@ function Update () {
 	
 	bodyGraphic.material.color=Color.Lerp(bodyStartingColor,bodyPunchColor,punchTimer/maxPunchCharge);
 	
+	var punchDir:Vector2=Utilities.Vector3To2(punchHitbox.transform.position-transform.position).normalized;
 	if (punchHitTimer>0f) {
 		var hitPlayer:boolean=false;
 		for (i=0;i<allPlayers.Count;i++) {
 			if (allPlayers[i]!=this) {
 				var attackVector:Vector3=allPlayers[i].myCollider.transform.position-punchHitbox.transform.position;
 				if (attackVector.magnitude<punchRadius) {
-					var punchDir:Vector2=Utilities.Vector3To2(punchHitbox.transform.position-transform.position).normalized;
 					allPlayers[i].position+=punchDir*punchKnockback;
 					hitPlayer=true;
 				}
@@ -158,6 +158,7 @@ function Update () {
 		var chickenHits:Collider[]=Physics.OverlapSphere(punchHitbox.transform.position,.5f,1<<8);
 		for (i=0;i<chickenHits.length;i++) {
 			var cChicken:Chicken=chickenHits[i].GetComponent(Chicken);
+			cChicken.rigidbody.velocity+=Utilities.Vector2To3(punchDir)*2f;
 		}
 		
 		punchHitbox.enabled=true;
