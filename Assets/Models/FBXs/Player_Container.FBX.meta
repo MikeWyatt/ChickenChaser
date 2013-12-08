@@ -53,6 +53,7 @@ ModelImporter:
     2300026: PlayerCoop_Post005
     2300028: PlayerCoop_Post006
     2300030: PlayerCoop_Post007
+    2300032: //RootNode
     3300000: PlayerCoop_Fence
     3300002: PlayerCoop_Fence001
     3300004: PlayerCoop_Fence002
@@ -69,6 +70,7 @@ ModelImporter:
     3300026: PlayerCoop_Post005
     3300028: PlayerCoop_Post006
     3300030: PlayerCoop_Post007
+    3300032: //RootNode
     4300000: PlayerCoop_Fence
     4300002: PlayerCoop_Post
     4300004: PlayerCoop_Fence001
@@ -85,6 +87,7 @@ ModelImporter:
     4300026: PlayerCoop_Post006
     4300028: PlayerCoop_Fence007
     4300030: PlayerCoop_Post007
+    4300032: PlayerContainer
     9500000: //RootNode
   materials:
     importMaterials: 1

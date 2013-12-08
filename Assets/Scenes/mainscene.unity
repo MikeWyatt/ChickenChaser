@@ -2855,6 +2855,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0fc6c7ba1fc8d1744965d1b869d05b71, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 36f7ef34f82129f49b2b8dd4208bbe18, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fc6c7ba1fc8d1744965d1b869d05b71, type: 3}
   m_RootGameObject: {fileID: 1734224746}
@@ -4515,7 +4519,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 110b177dd6e5aad438c152a3e2921eb9, type: 2}
+  - {fileID: 2100000, guid: 36f7ef34f82129f49b2b8dd4208bbe18, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -5077,7 +5081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fenceRadius: 4
   outerFenceRadius: 15
-  fencePieceLength: 1.5
+  fencePieceLength: 2.75
   fencePiecePrefab: {fileID: 100004, guid: 3fc8c627511eae14fa2120d3d2398790, type: 2}
 --- !u!1 &2066856385
 GameObject:

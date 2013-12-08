@@ -77,6 +77,7 @@ ModelImporter:
     2300042: FenceWire009
     2300044: FenceWire010
     2300046: FenceWire011
+    2300048: //RootNode
     3300000: FencePost
     3300002: FencePost001
     3300004: FencePost002
@@ -101,6 +102,7 @@ ModelImporter:
     3300042: FenceWire009
     3300044: FenceWire010
     3300046: FenceWire011
+    3300048: //RootNode
     4300000: FencePost
     4300002: FenceWire
     4300004: FencePost001
@@ -125,6 +127,7 @@ ModelImporter:
     4300042: FenceWire010
     4300044: FencePost011
     4300046: FenceWire011
+    4300048: ChickenCoop_Fence004
     9500000: //RootNode
   materials:
     importMaterials: 1
