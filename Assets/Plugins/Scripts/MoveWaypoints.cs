@@ -20,7 +20,9 @@ public class MoveWaypoints : MonoBehaviour {
 
 	void Start()
 	{
-		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 8 * Time.deltaTime);
+		if(direction.sqrMagnitude > 0f) {
+			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 8 * Time.deltaTime);
+		}
 		direction = destination - transform.position;
 		direction.Normalize();
 	}
