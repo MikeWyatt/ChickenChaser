@@ -1666,17 +1666,10 @@ Prefab:
       propertyPath: swishSound
       value: 
       objectReference: {fileID: 1390112842}
-<<<<<<< HEAD
-    - target: {fileID: 11400006, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
-      propertyPath: featherPoofEffect
-      value: 
-      objectReference: {fileID: 100000, guid: 959128634bd8319499709a7c4feb073f, type: 2}
-=======
     - target: {fileID: 100074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
->>>>>>> 60b23ae40f1d8c174c435497152be9d8b41dce05
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_RootGameObject: {fileID: 1390112836}
@@ -3271,17 +3264,10 @@ Prefab:
       propertyPath: hitSound
       value: 
       objectReference: {fileID: 782447531}
-<<<<<<< HEAD
-    - target: {fileID: 11400006, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
-      propertyPath: featherPoofEffect
-      value: 
-      objectReference: {fileID: 100000, guid: 959128634bd8319499709a7c4feb073f, type: 2}
-=======
     - target: {fileID: 100074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_Name
       value: Player 0
       objectReference: {fileID: 0}
->>>>>>> 60b23ae40f1d8c174c435497152be9d8b41dce05
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_RootGameObject: {fileID: 782447524}
@@ -4213,17 +4199,10 @@ Prefab:
       propertyPath: hitSound
       value: 
       objectReference: {fileID: 939729744}
-<<<<<<< HEAD
-    - target: {fileID: 11400006, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
-      propertyPath: featherPoofEffect
-      value: 
-      objectReference: {fileID: 100000, guid: 959128634bd8319499709a7c4feb073f, type: 2}
-=======
     - target: {fileID: 100074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_Name
       value: Player 2
       objectReference: {fileID: 0}
->>>>>>> 60b23ae40f1d8c174c435497152be9d8b41dce05
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_RootGameObject: {fileID: 939729738}
@@ -5890,17 +5869,10 @@ Prefab:
       propertyPath: swishSound
       value: 
       objectReference: {fileID: 1175642178}
-<<<<<<< HEAD
-    - target: {fileID: 11400006, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
-      propertyPath: featherPoofEffect
-      value: 
-      objectReference: {fileID: 100000, guid: 959128634bd8319499709a7c4feb073f, type: 2}
-=======
     - target: {fileID: 100074, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
       propertyPath: m_Name
       value: Player 3
       objectReference: {fileID: 0}
->>>>>>> 60b23ae40f1d8c174c435497152be9d8b41dce05
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_RootGameObject: {fileID: 1175642172}
