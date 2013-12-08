@@ -4,7 +4,6 @@ using System.Collections;
 public class ThrownBehavior : MonoBehaviour, IChickenBehavior {
 	public float throwDistance = 8.0f;
 
-	Vector3 startPos;
 	Vector3 endPos;
 
 	// Use this for initialization
@@ -12,12 +11,8 @@ public class ThrownBehavior : MonoBehaviour, IChickenBehavior {
 		SetThrowArc();
 	}
 	public void SetThrowArc() {
-		startPos = gameObject.transform.position;
 		endPos = gameObject.transform.position 
 			+ gameObject.transform.forward * throwDistance;
-		
-//		Debug.Log(startPos);
-//		Debug.Log(endPos);
 	}
 	
 	// Update is called once per frame
