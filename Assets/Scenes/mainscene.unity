@@ -839,7 +839,6 @@ GameObject:
   - 33: {fileID: 285950422}
   - 65: {fileID: 285950421}
   - 23: {fileID: 285950420}
-  - 114: {fileID: 285950424}
   m_Layer: 0
   m_Name: Player 2 Drop
   m_TagString: Untagged
@@ -875,10 +874,10 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 285950419}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 5, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &285950422
 MeshFilter:
@@ -898,19 +897,6 @@ Transform:
   m_LocalScale: {x: 2, y: 1.5, z: 2}
   m_Children: []
   m_Father: {fileID: 608124921}
---- !u!114 &285950424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 285950419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d7b9f01d6695c40a4d8670de4cda73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Score: {fileID: 939729747}
-  Particles: {fileID: 19800000, guid: db8d30df0e9fba145b2f1dce38ed312b, type: 2}
 --- !u!1 &295055327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,7 +1508,6 @@ GameObject:
   - 33: {fileID: 495430172}
   - 65: {fileID: 495430171}
   - 23: {fileID: 495430170}
-  - 114: {fileID: 495430173}
   m_Layer: 0
   m_Name: Player 1 Drop
   m_TagString: Untagged
@@ -1569,10 +1554,10 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 495430168}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 5, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &495430172
 MeshFilter:
@@ -1581,19 +1566,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 495430168}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &495430173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 495430168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d7b9f01d6695c40a4d8670de4cda73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Score: {fileID: 1390112845}
-  Particles: {fileID: 19800000, guid: db8d30df0e9fba145b2f1dce38ed312b, type: 2}
 --- !u!1 &500088803
 GameObject:
   m_ObjectHideFlags: 0
@@ -1698,6 +1670,10 @@ Prefab:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
+      propertyPath: featherPoofEffect
+      value: 
+      objectReference: {fileID: 100000, guid: 959128634bd8319499709a7c4feb073f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_RootGameObject: {fileID: 1390112836}
@@ -1848,7 +1824,6 @@ GameObject:
   - 33: {fileID: 543122141}
   - 65: {fileID: 543122140}
   - 23: {fileID: 543122139}
-  - 114: {fileID: 543122142}
   m_Layer: 0
   m_Name: Player 3 Drop
   m_TagString: Untagged
@@ -1895,10 +1870,10 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 543122137}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 5, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &543122141
 MeshFilter:
@@ -1907,19 +1882,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 543122137}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &543122142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 543122137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d7b9f01d6695c40a4d8670de4cda73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Score: {fileID: 1175642181}
-  Particles: {fileID: 19800000, guid: db8d30df0e9fba145b2f1dce38ed312b, type: 2}
 --- !u!1 &557148777
 GameObject:
   m_ObjectHideFlags: 0
@@ -2607,7 +2569,6 @@ GameObject:
   - 82: {fileID: 782447532}
   - 82: {fileID: 782447531}
   - 82: {fileID: 782447530}
-  - 114: {fileID: 782447533}
   m_Layer: 0
   m_Name: Player 0
   m_TagString: Untagged
@@ -2892,18 +2853,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &782447533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 782447524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36b99a752f3e0ce419cdaea11ddf8384, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Value: 0
 --- !u!1 &798757808
 GameObject:
   m_ObjectHideFlags: 0
@@ -3153,32 +3102,6 @@ Transform:
   m_Children:
   - {fileID: 1243310655}
   m_Father: {fileID: 215815333}
---- !u!1 &830836369
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 830836370}
-  m_Layer: 0
-  m_Name: ScoreTracker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &830836370
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 830836369}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.6851997, y: 20.8909664, z: -7.89889622}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
 --- !u!1 &838438372
 GameObject:
   m_ObjectHideFlags: 0
@@ -3349,6 +3272,10 @@ Prefab:
       propertyPath: m_Name
       value: Player 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
+      propertyPath: featherPoofEffect
+      value: 
+      objectReference: {fileID: 100000, guid: 959128634bd8319499709a7c4feb073f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_RootGameObject: {fileID: 782447524}
@@ -3807,7 +3734,6 @@ GameObject:
   - 82: {fileID: 939729746}
   - 82: {fileID: 939729744}
   - 82: {fileID: 939729745}
-  - 114: {fileID: 939729747}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Untagged
@@ -4092,18 +4018,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &939729747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 939729738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36b99a752f3e0ce419cdaea11ddf8384, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Value: 0
 --- !u!1 &940813429
 GameObject:
   m_ObjectHideFlags: 0
@@ -4297,6 +4211,10 @@ Prefab:
       propertyPath: m_Name
       value: Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
+      propertyPath: featherPoofEffect
+      value: 
+      objectReference: {fileID: 100000, guid: 959128634bd8319499709a7c4feb073f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_RootGameObject: {fileID: 939729738}
@@ -5310,7 +5228,6 @@ GameObject:
   - 82: {fileID: 1175642180}
   - 82: {fileID: 1175642179}
   - 82: {fileID: 1175642178}
-  - 114: {fileID: 1175642181}
   m_Layer: 0
   m_Name: Player 3
   m_TagString: Untagged
@@ -5595,18 +5512,46 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &1175642181
+--- !u!1 &1198406396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1198406398}
+  - 114: {fileID: 1198406397}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1198406397
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1175642172}
+  m_GameObject: {fileID: 1198406396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36b99a752f3e0ce419cdaea11ddf8384, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a0901d7a89629646be481288f6fe40d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 0
+  NumPlayers: 4
+  PauseTexture: {fileID: 2800000, guid: 213634e573ce9f74eb6b35e6f9e386f6, type: 3}
+--- !u!4 &1198406398
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1198406396}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &1200051026
 GameObject:
   m_ObjectHideFlags: 0
@@ -5980,6 +5925,10 @@ Prefab:
       propertyPath: m_Name
       value: Player 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
+      propertyPath: featherPoofEffect
+      value: 
+      objectReference: {fileID: 100000, guid: 959128634bd8319499709a7c4feb073f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_RootGameObject: {fileID: 1175642172}
@@ -6395,7 +6344,6 @@ GameObject:
   - 82: {fileID: 1390112844}
   - 82: {fileID: 1390112843}
   - 82: {fileID: 1390112842}
-  - 114: {fileID: 1390112845}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Untagged
@@ -6680,18 +6628,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &1390112845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1390112836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36b99a752f3e0ce419cdaea11ddf8384, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Value: 0
 --- !u!1 &1394123391
 GameObject:
   m_ObjectHideFlags: 0
@@ -8032,7 +7968,6 @@ GameObject:
   - 33: {fileID: 1741730781}
   - 65: {fileID: 1741730780}
   - 23: {fileID: 1741730779}
-  - 114: {fileID: 1741730782}
   m_Layer: 0
   m_Name: Player 0 Drop
   m_TagString: Untagged
@@ -8079,10 +8014,10 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1741730777}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 5, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1741730781
 MeshFilter:
@@ -8091,19 +8026,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1741730777}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1741730782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1741730777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d7b9f01d6695c40a4d8670de4cda73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Score: {fileID: 782447533}
-  Particles: {fileID: 19800000, guid: db8d30df0e9fba145b2f1dce38ed312b, type: 2}
 --- !u!1 &1748198900
 GameObject:
   m_ObjectHideFlags: 0
