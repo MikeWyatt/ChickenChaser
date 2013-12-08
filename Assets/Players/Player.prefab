@@ -45,6 +45,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400004}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -99,7 +100,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5.67069817}
+  m_LocalPosition: {x: .595629692, y: 0, z: 5.67069817}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -236,21 +237,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5f3ce5fe1fe3bd47b92ff159c44ddf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerIndex: 0
   moveSpeed: 6
   movementSmooth: 8
   turnSmooth: 6
   fenceWidth: .5
   bodyGraphic: {fileID: 2300002}
   punchHitbox: {fileID: 2300004}
+  myCollider: {fileID: 13500000}
   maxPunchCharge: 1.5
   punchHitTime: .0500000007
-  punchMinCooldown: .200000003
-  punchMaxCooldown: .600000024
+  punchCooldownTime: .100000001
+  punchRadius: 1
+  punchKnockback: .5
   bodyPunchColor: {r: .947761178, g: .0778012797, b: .0778012797, a: 1}
-  bodyCooldownColor: {r: .0424927734, g: .684044123, b: .813432813, a: 1}
+  bodyCooldownColor: {r: .220047608, g: .489728242, b: .544117689, a: 1}
   position: {x: 0, y: 0}
   inputPrefix: 
-  playerIndex: 0
+  health: 1
+  stunTimer: 0
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b32e472494bb814c8073561c64a888f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
