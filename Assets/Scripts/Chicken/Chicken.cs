@@ -1,76 +1,50 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum ChickenState
-{
-	Spawning,
-	Running,
-	Held,
-	Thrown,
-	Escaping
-}
+
 
 public class Chicken : MonoBehaviour {
+	/**
 	const float CHANGE_DIRECTION_TIME = 1500; // in ms
 
 	float changeDirectionTime;
-	ChickenState state;
+	//ChickenState state;
 	GameObject holder;
+	GameObject spawner;
 
-	Vector3 curDestination;
+	ChickenBehavior behavior;
+	ChickenState state;
+
+	Vector3 direction;
 
 	// Use this for initialization
 	void Start () {
 		state = ChickenState.Spawning;
-		holder = null;
-		changeDirectionTime = CHANGE_DIRECTION_TIME;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		switch(state)
+		switch (state)
 		{
-		case ChickenState.Escaping:
-			UpdateEscaping();
-			break;
-		case ChickenState.Held:
-			UpdateHeld();
-			break;
-		case ChickenState.Running:
-			UpdateRunning();
-			break;
 		case ChickenState.Spawning:
-			UpdateSpawning();
-			break;
 		case ChickenState.Thrown:
-			UpdateThrown();
+			if (!behavior.IsEnabled)
+			{
+				direction = transform.position - spawner.transform.position;
+				Vector3 offset = new Vector3(Random.Range(-0.25, 0.25),
+				                             0, Random.Range(-0.25, 0.25));
+				direction += offset;
+			}
+			state = ChickenState.Running;
 			break;
+
 		}
 	}
 
-
-	void UpdateSpawning()
+	private void changeBehavior(ChickenBehavior newBehavior)
 	{
-
-	}
-
-	void UpdateRunning()
-	{
-		changeDirectionTime -= Time.deltaTime;
-	}
-
-	void UpdateHeld()
-	{
-
-	}
-
-	void UpdateThrown()
-	{
-
-	}
-
-	void UpdateEscaping()
-	{
-
-	}
+		curBehavior.disable();
+		curBehavior = newBehavior;
+		curBehavior.enable();
+	}**/
 }

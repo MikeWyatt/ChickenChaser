@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class HeldBehavior : ChickenBehavior {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
+	public GameObject Holder { get; set; }
+
 	// Update is called once per frame
-	void Update () {
-	
+	public void Update () 
+	{
+		const float heldY = 3;
+		transform.position = new Vector3(
+			Holder.transform.position.x,
+			heldY,
+			Holder.transform.position.z);
 	}
 }
