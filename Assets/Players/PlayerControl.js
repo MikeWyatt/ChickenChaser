@@ -28,12 +28,32 @@ private var punchStrength:float;
 private var bodyStartingColor:Color;
 
 static var fenceRadius:float;
-static var madeFence:boolean=false;
+static var playBounds:Rect;
+static var doneInit:boolean=false;
 
 function Start () {
-	if (madeFence==false) {
-		madeFence=true;
+	var i:int;
+	if (doneInit==false) {
+		doneInit=true;
 		fenceRadius=FenceControl.staticFenceRadius;
+		var boundaryObjects:GameObject[]=GameObject.FindGameObjectsWithTag("Escape Zone");
+		playBounds=new Rect(0,0,5,5);
+		for (i=0;i<boundaryObjects.length;i++) {
+			switch (boundaryObjects[i].name) {
+				case "North Wall":
+					playBounds.yMax=boundaryObjects[i].transform.position.z;
+					break;
+				case "South Wall":
+					playBounds.yMin=boundaryObjects[i].transform.position.z;
+					break;
+				case "East Wall":
+					playBounds.xMax=boundaryObjects[i].transform.position.x;
+					break;
+				case "West Wall":
+					playBounds.xMin=boundaryObjects[i].transform.position.x;
+					break;
+			}
+		}
 	}
 	
 	bodyStartingColor=bodyGraphic.material.color;
@@ -53,11 +73,28 @@ function Update () {
 	if (position.magnitude<(fenceRadius+fenceWidth)) {
 		position=position.normalized*(fenceRadius+fenceWidth);
 	}
+	if (position.x>playBounds.xMax-fenceWidth) {
+		position.x=playBounds.xMax-fenceWidth;
+	}
+	if (position.x<playBounds.xMin+fenceWidth) {
+		position.x=playBounds.xMin+fenceWidth;
+	}
+	if (position.y>playBounds.yMax-fenceWidth) {
+		position.y=playBounds.yMax-fenceWidth;
+	}
+	if (position.y<playBounds.yMin+fenceWidth) {
+		position.y=playBounds.yMin+fenceWidth;
+	}
 	
 	transform.position=Vector3.Lerp(transform.position,Utilities.Vector2To3(position),movementSmooth*Time.deltaTime);
 	
 	if (Input.GetButton(inputPrefix+"Fire1")) {
-		if (punching==false) {
+		if (punchCooldown<=0f) {
+			punchHitTimer=punchHitTime;
+			punchStrength=1f;
+			punchCooldown=punchMaxCooldown;
+		}
+		/*if (punching==false) {
 			if (punchCooldown<=0f) {
 				punching=true;
 				punchTimer=0f;
@@ -71,7 +108,7 @@ function Update () {
 				punchCooldown=punchMaxCooldown;
 				punchTimer=0f;
 			}
-		}
+		}*/
 	} else {
 		if (punching) {
 			punching=false;

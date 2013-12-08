@@ -498,16 +498,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerIndex: 1
-  moveSpeed: 6
-  movementSmooth: 8
+  moveSpeed: 8
+  movementSmooth: 10
   turnSmooth: 6
-  fenceWidth: .5
+  fenceWidth: .649999976
   bodyGraphic: {fileID: 687458998}
   punchHitbox: {fileID: 74011451}
   maxPunchCharge: 1.5
   punchHitTime: .0500000007
   punchMinCooldown: .200000003
-  punchMaxCooldown: .600000024
+  punchMaxCooldown: .100000001
   bodyPunchColor: {r: .947761178, g: .0778012797, b: .0778012797, a: 1}
   bodyCooldownColor: {r: .220047608, g: .489728242, b: .544117689, a: 1}
   position: {x: 0, y: 0}
@@ -635,6 +635,22 @@ Prefab:
     - target: {fileID: 11400000, guid: 78858abbbbb52d24abf1755542d8daf7, type: 2}
       propertyPath: playerIndex
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 78858abbbbb52d24abf1755542d8daf7, type: 2}
+      propertyPath: fenceWidth
+      value: .649999976
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 78858abbbbb52d24abf1755542d8daf7, type: 2}
+      propertyPath: moveSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 78858abbbbb52d24abf1755542d8daf7, type: 2}
+      propertyPath: movementSmooth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 78858abbbbb52d24abf1755542d8daf7, type: 2}
+      propertyPath: punchMaxCooldown
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78858abbbbb52d24abf1755542d8daf7, type: 2}
@@ -972,7 +988,7 @@ GameObject:
   - 23: {fileID: 941039409}
   m_Layer: 0
   m_Name: West Wall
-  m_TagString: Wall
+  m_TagString: Escape Zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1211,6 +1227,22 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 78858abbbbb52d24abf1755542d8daf7, type: 2}
+      propertyPath: fenceWidth
+      value: .649999976
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 78858abbbbb52d24abf1755542d8daf7, type: 2}
+      propertyPath: moveSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 78858abbbbb52d24abf1755542d8daf7, type: 2}
+      propertyPath: movementSmooth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 78858abbbbb52d24abf1755542d8daf7, type: 2}
+      propertyPath: punchMaxCooldown
+      value: .100000001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78858abbbbb52d24abf1755542d8daf7, type: 2}
   m_RootGameObject: {fileID: 1390112836}
@@ -1285,16 +1317,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerIndex: 0
-  moveSpeed: 6
-  movementSmooth: 8
+  moveSpeed: 8
+  movementSmooth: 10
   turnSmooth: 6
-  fenceWidth: .5
+  fenceWidth: .649999976
   bodyGraphic: {fileID: 1643477493}
   punchHitbox: {fileID: 1449277299}
   maxPunchCharge: 1.5
   punchHitTime: .0500000007
   punchMinCooldown: .200000003
-  punchMaxCooldown: .600000024
+  punchMaxCooldown: .100000001
   bodyPunchColor: {r: .947761178, g: .0778012797, b: .0778012797, a: 1}
   bodyCooldownColor: {r: .220047608, g: .489728242, b: .544117689, a: 1}
   position: {x: 0, y: 0}
