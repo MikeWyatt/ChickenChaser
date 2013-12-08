@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a87fb86e013b79146b5b6d15f733d032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chickenPrefab: {fileID: 100000, guid: 8978210716f348a4a8999164a063a825, type: 2}
+  chickenPrefab: {fileID: 100002, guid: 8978210716f348a4a8999164a063a825, type: 2}
   SPAWN_TIMER: 3
 --- !u!1 &5301544
 GameObject:
