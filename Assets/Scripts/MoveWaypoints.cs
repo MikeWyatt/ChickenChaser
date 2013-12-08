@@ -4,6 +4,8 @@ using System.Collections.Generic;
 public class MoveWaypoints : MonoBehaviour {
 	public float speed = 5.0f;
 	public float reachedDestDist = 0.2f;
+	public float turnCoeefficient = 8.0f;
+	public bool finished;
 
 	Queue<Vector3> waypoints;
 	Vector3 destination;
@@ -13,10 +15,12 @@ public class MoveWaypoints : MonoBehaviour {
 	{
 		waypoints = new Queue<Vector3>();
 		destination = Vector3.zero;
+		finished = false;
 	}
 
 	void Start()
 	{
+		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 8 * Time.deltaTime);
 		direction = destination - transform.position;
 		direction.Normalize();
 	}
@@ -37,24 +41,26 @@ public class MoveWaypoints : MonoBehaviour {
 	void Update () {
 		if (destination.magnitude > 0)
 		{
-			transform.position += direction * speed * Time.deltaTime;
+			gameObject.transform.position += direction * speed * Time.deltaTime;
 			Vector3 distToDest = destination - gameObject.transform.position;
 			if (distToDest.magnitude <= reachedDestDist)
 			{
 				//destination reached
 				destination = Vector3.zero;
-				Debug.Log("Destination Reached");
+				//Debug.Log("Destination Reached");
 			}
-			else
-			{
-				Debug.Log ("Dist to dest: " + distToDest.magnitude.ToString());
-			}
+			gameObject.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), turnCoeefficient * Time.deltaTime);
 		}
 		else if (waypoints.Count > 0)
 		{
 			destination = waypoints.Dequeue();
-			direction = destination - transform.position;
-			direction.Normalize();
 		}
+		else
+		{
+			finished = true;
+		}
+
+		direction = destination - transform.position;
+		direction.Normalize();
 	}
 }
