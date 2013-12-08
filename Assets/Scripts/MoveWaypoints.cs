@@ -28,11 +28,13 @@ public class MoveWaypoints : MonoBehaviour {
 	public void AddWayPoint(Vector3 waypoint)
 	{
 		waypoints.Enqueue(waypoint);
+		finished = false;
 	}
 
 	public void Clear()
 	{
 		waypoints.Clear();
+		finished = true;
 	}
 
 	//public void enable();

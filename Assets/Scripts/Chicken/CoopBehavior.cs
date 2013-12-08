@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class CoopBehavior : MonoBehaviour, IChickenBehavior {
-	const float END_DISTANCE = 5.0f;
-	const float START_DISTANCE = 2.0f;
+	public float endDistance = 5.0f;
+	public float startDistance = 2.0f;
 
 	MoveWaypoints mover;
 
@@ -14,9 +14,9 @@ public class CoopBehavior : MonoBehaviour, IChickenBehavior {
 		mover = gameObject.GetComponent<MoveWaypoints>();
 		mover.Clear();
 
-		float curDistance = START_DISTANCE;
+		float curDistance = startDistance;
 		int numWaypoints = Random.Range(3,6);
-		float deltaDistance = (END_DISTANCE - START_DISTANCE) / (float)numWaypoints;
+		float deltaDistance = (endDistance - startDistance) / (float)numWaypoints;
 
 		Vector3 curMove;
 
