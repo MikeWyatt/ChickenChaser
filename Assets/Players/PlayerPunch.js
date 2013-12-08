@@ -147,6 +147,7 @@ function Update () {
 		if(animator) {
 			animator.SetBool("IsPunching", true);
 		}
+		punchHitTimer=0f;
 	} else {
 		//punchHitbox.enabled=false;
 		if (punchCooldown>0f) {
