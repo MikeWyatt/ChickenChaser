@@ -17,6 +17,7 @@ var punchRadius:float;
 var punchKnockback:float;
 var bodyPunchColor:Color;
 var bodyCooldownColor:Color;
+var animator:Animator;
 
 @HideInInspector
 var position:Vector2;
@@ -89,6 +90,11 @@ function Update () {
 	if (inputDir.magnitude>0f) {
 		facingDirection=Utilities.Vector2To3(inputDir);
 	}
+	
+	if(animator) {
+		animator.SetBool("IsRunning", inputDir.magnitude>0f);
+	}
+	
 	transform.rotation=Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(facingDirection,Vector3.up),turnSmooth*Time.deltaTime);
 	position+=inputDir*moveSpeed*Time.deltaTime;
 	
@@ -164,16 +170,23 @@ function Update () {
 			cChicken.rigidbody.velocity+=Utilities.Vector2To3(punchDir)*2f;
 		}
 		
-		punchHitbox.enabled=true;
+		//punchHitbox.enabled=true;
 		punchHitTimer-=Time.deltaTime;
+		
+		if(animator) {
+			animator.SetBool("IsPunching", true);
+		}
 	} else {
-		punchHitbox.enabled=false;
+		//punchHitbox.enabled=false;
 		if (punchCooldown>0f) {
 			bodyGraphic.material.color=bodyCooldownColor;
 			punchCooldown-=Time.deltaTime;
 			if (punchCooldown<=0f) {
 				bodyGraphic.material.color=bodyStartingColor;
 			}
+		}
+		if(animator) {
+			animator.SetBool("IsPunching", false);
 		}
 	}
 	

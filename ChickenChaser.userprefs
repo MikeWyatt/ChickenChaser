@@ -1,15 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Chicken\ThrownBehavior.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/Scripts/Chicken/RunningBehavior.cs">
     <Files>
-      <File FileName="Assets\Scripts\Chicken\ThrownBehavior.cs" Line="18" Column="3" />
-      <File FileName="Assets\Scripts\MoveWaypoints.cs" Line="56" Column="33" />
-      <File FileName="Assets\Scripts\Chicken\RunningBehavior.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ChickenSpawner.cs" Line="19" Column="31" />
+      <File FileName="Assets/Plugins/Scripts/Chicken/RunningBehavior.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="Assets\Scripts\Chicken\RunningBehavior.cs" line="19" offsetX="324" offsetY="306" expression="escapeZones" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
 </Properties>
