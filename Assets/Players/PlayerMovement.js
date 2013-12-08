@@ -7,7 +7,6 @@ var moveSpeed:float;
 var movementSmooth:float;
 var turnSmooth:float;
 var fenceWidth:float;
-var bodyGraphic:Renderer;
 var myCollider:Collider;
 var animator:Animator;
 
@@ -21,7 +20,6 @@ var health:float=1f;
 var stunTimer:float=0f;
 
 private var facingDirection:Vector3;
-private var bodyStartingColor:Color;
 
 static var playBounds:Rect;
 static var doneInit:boolean=false;
@@ -60,7 +58,6 @@ function Start () {
 		}
 	}*/
 	
-	bodyStartingColor=bodyGraphic.material.color;
 	position=Utilities.Vector3To2(transform.position);
 	inputPrefix="P"+(playerIndex+1);
 }

@@ -24,36 +24,56 @@ var health:float=1f;
 @HideInInspector
 var stunTimer:float=0f;
 
+private var facingDirection:Vector3;
 private var punchTimer:float=0f;
 private var punching:boolean=false;
 private var punchCooldown:float=0f;
 private var punchHitTimer:float=0f;
 private var punchStrength:float;
 private var bodyStartingColor:Color;
-private var grabbedChicken:Chicken;
 
 static var doneInit:boolean=false;
-static var allPlayers:List.<PlayerControl>;
+static var allPlayers:List.<PlayerPunch>;
 
-function Start () {
-	var i:int;
-	
+function Start () {	
 	if (doneInit==false) {
 		doneInit=true;
-		allPlayers=new List.<PlayerControl>();
+		allPlayers=new List.<PlayerPunch>();
 	}
 	allPlayers.Add(this);
+	
+	/*if (doneInit==false) {
+		doneInit=true;
+		fenceRadius=FenceControl.staticFenceRadius;
+		var boundaryObjects:GameObject[]=GameObject.FindGameObjectsWithTag("Escape Zone");
+		playBounds=new Rect(0,0,5,5);
+		for (i=0;i<boundaryObjects.length;i++) {
+			switch (boundaryObjects[i].name) {
+				case "North Wall":
+					playBounds.yMax=boundaryObjects[i].transform.position.z;
+					break;
+				case "South Wall":
+					playBounds.yMin=boundaryObjects[i].transform.position.z;
+					break;
+				case "East Wall":
+					playBounds.xMax=boundaryObjects[i].transform.position.x;
+					break;
+				case "West Wall":
+					playBounds.xMin=boundaryObjects[i].transform.position.x;
+					break;
+			}
+		}
+	}*/
 	
 	bodyStartingColor=bodyGraphic.material.color;
 	inputPrefix="P"+(playerIndex+1);
 }
 
 function Update () {
-	//Put this here for memory efficiency in loop code
+	//put this here to optimize loop memory efficiency
 	var i:int;
 	var cChicken:Chicken;
 	var chickenHits:Collider[];
-	
 	if (Input.GetButton(inputPrefix+"Fire1")) {
 		if (punchCooldown<=0f) {
 			punchHitTimer=punchHitTime;
