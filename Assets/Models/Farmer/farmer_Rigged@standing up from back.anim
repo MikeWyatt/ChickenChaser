@@ -6,10 +6,9 @@ AnimationClip:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: farmer_Rigged@standing up from back
-  serializedVersion: 4
+  serializedVersion: 3
   m_AnimationType: 2
   m_Compressed: 0
-  m_UseHighQualityCurve: 1
   m_RotationCurves:
   - curve:
       serializedVersion: 2
@@ -8173,20 +8172,17 @@ AnimationClip:
       Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/Bip001
       R Finger3/Bip001 R Finger31
   m_FloatCurves: []
-  m_PPtrCurves: []
   m_SampleRate: 30
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_AnimationClipSettings:
-    serializedVersion: 2
+  m_MuscleClipInfo:
     m_StartTime: 0
     m_StopTime: 8.26666641
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
-    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
