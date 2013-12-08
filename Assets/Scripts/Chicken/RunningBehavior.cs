@@ -14,19 +14,14 @@ public class RunningBehavior : MonoBehaviour, IChickenBehavior {
 			.Select(c => c.gameObject)
 			.Where(go => go.CompareTag(EscapeZoneTag))
 			.ToArray();
-//
-//		Debug.Log(string.Format ("all colliders: {0}", FindObjectsOfType<Collider>().Select ()));
-		Debug.Log (escapeZones);
-		//		//EscapeZoneTag
-//
-//		if(EscapeZones.Count() == 0) {
-//			throw new UnityException("Needs at least one escape zone!");
-//		}
+
+		if(escapeZones.Count() == 0) {
+			throw new UnityException(string.Format ("No colliders found with tag {0}!", EscapeZoneTag));
+		}
 	}
-	/*
+
 	void Update () {
 		Vector3 escapePoint = CalcEscapePoint();
-//		Debug.Log (string.Format ("escapePoint = {0}", escapePoint));
 
 		var delta = escapePoint - transform.position;
 		delta.Normalize();
@@ -44,12 +39,10 @@ public class RunningBehavior : MonoBehaviour, IChickenBehavior {
 	}
 
 	public void OnCollisionEnter(Collision collision) {
-		//if(!EscapeZones.Contains (collision.gameObject)) {
 		if(!collision.gameObject.CompareTag(EscapeZoneTag)) {
 			return;
 		}
 		//GetComponent<Chicken>().ChangeBehavior<RunningBehavior>();
 		Destroy(gameObject);
 	}
-	*/
 }
