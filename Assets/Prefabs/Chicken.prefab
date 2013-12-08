@@ -16,7 +16,6 @@ GameObject:
   - 135: {fileID: 13500000}
   - 54: {fileID: 5400000}
   - 114: {fileID: 11400010}
-  - 114: {fileID: 11400012}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Untagged
@@ -134,7 +133,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 2
-  EscapeZoneTag: Wall
+  EscapeRadius: 15
+  PlayerAvoidanceWeight: 4
+  PlayerAvoidanceRadius: 3
+  Origin: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -193,17 +195,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   reachedDestDist: .200000003
---- !u!114 &11400012
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb96dbb934732f94389fd9f707dade16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
