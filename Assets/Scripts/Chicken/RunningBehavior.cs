@@ -12,20 +12,30 @@ public class RunningBehavior : MonoBehaviour, IChickenBehavior {
 
 	void Update () {
 		Vector3 deltaFromOrigin = (transform.position - FindObjectOfType<ChickenSpawner>().transform.position);
-
+		
 		// check if escaped
 		if(deltaFromOrigin.magnitude >= EscapeRadius) {
 			Destroy(gameObject);
 			return;
 		}
 
+		Vector3 desired = CalcDesiredHeading(deltaFromOrigin);
+
+//		rigidbody.velocity = Vector3.zero;
+//		rigidbody.AddForce(desired * Speed, ForceMode.VelocityChange);
+		transform.position += desired * Speed * Time.deltaTime;
+		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(desired), 8 * Time.deltaTime);
+	}
+
+	private Vector3 CalcDesiredHeading(Vector3 deltaFromOrigin) {
+		
 		// start desired vector so that chicken simply tries to leave the map
 		Vector3 desired = deltaFromOrigin.normalized;
-
+		
 		// find nearby players
 		IEnumerable<GameObject> nearbyPlayers = FindObjectsOfType<ChickenScarer>()
 			.Select(pc => pc.gameObject);
-
+		
 		// add bias so chicken moves away from players.
 		foreach(GameObject go in nearbyPlayers) {
 			Vector3 delta = go.transform.position - transform.position;
@@ -33,10 +43,8 @@ public class RunningBehavior : MonoBehaviour, IChickenBehavior {
 			float finalWeight = Mathf.Pow (weight, 4) * PlayerAvoidanceWeight;
 			desired += -delta.normalized * finalWeight;
 		}
-
+		
 		desired.Normalize();
-
-		transform.position += desired * Speed * Time.deltaTime;
-		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(desired), 8 * Time.deltaTime);
+		return desired;
 	}
 }
