@@ -12,15 +12,17 @@ public class SpawnBehavior : MonoBehaviour, IChickenBehavior {
 		mover.Clear();
 
 		Vector3 startMove = new Vector3(Random.Range(-10, 10)
-		                            , Random.Range(-10, 10)
+		                            , 0
 		                            , Random.Range (-10, 10));
 		startMove.Normalize();
 		startMove *= INIT_DISTANCE;
-		mover.AddWayPoint(startMove);
+		Vector3 newPos = transform.position + startMove;
+		mover.AddWayPoint(newPos);
 		for (int i = 0; i < 3; i ++)
 		{
 			Vector3 newMove = Quaternion.Euler(0, Random.Range(-45, 45), 0) * startMove;
-			mover.AddWayPoint(newMove);
+			newPos += newMove;
+			mover.AddWayPoint(newPos);
 		}
 	}
 }

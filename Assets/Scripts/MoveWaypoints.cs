@@ -18,6 +18,7 @@ public class MoveWaypoints : MonoBehaviour {
 	void Start()
 	{
 		direction = destination - transform.position;
+		direction.Normalize();
 	}
 
 	public void AddWayPoint(Vector3 waypoint)
@@ -42,12 +43,18 @@ public class MoveWaypoints : MonoBehaviour {
 			{
 				//destination reached
 				destination = Vector3.zero;
+				Debug.Log("Destination Reached");
+			}
+			else
+			{
+				Debug.Log ("Dist to dest: " + distToDest.magnitude.ToString());
 			}
 		}
 		else if (waypoints.Count > 0)
 		{
 			destination = waypoints.Dequeue();
 			direction = destination - transform.position;
+			direction.Normalize();
 		}
 	}
 }
