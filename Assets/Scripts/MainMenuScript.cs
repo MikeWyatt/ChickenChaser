@@ -9,9 +9,10 @@ public class MainMenuScript : MonoBehaviour {
 	}
 	
 	void  OnGUI(){
-	
-		if (GUI.Button (new Rect (10, 10, 150, 100), "I am a button.")){
-			print ("You clicked the button!");
+		
+		if (GUI.Button (new Rect (150, 130, 100, 50), "PLAY")){
+			print ("This button should start the game!");
+			Application.LoadLevel(1);
 		}
 	
 	}
