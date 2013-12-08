@@ -8,10 +8,9 @@ public class RunningBehavior : MonoBehaviour, IChickenBehavior {
 	public float EscapeRadius = 15f;
 	public float PlayerAvoidanceWeight = 4f;		// how badly the chicken wants to avoid the players vs. reaching the fence
 	public float PlayerAvoidanceRadius = 3f;
-	public GameObject Origin;	// fixed point chicken is running from, other than the players
 
 	void Update () {
-		Vector3 deltaFromOrigin = (transform.position - Origin.transform.position);
+		Vector3 deltaFromOrigin = (transform.position - FindObjectOfType<ChickenSpawner>().transform.position);
 
 		// check if escaped
 		if(deltaFromOrigin.magnitude >= EscapeRadius) {

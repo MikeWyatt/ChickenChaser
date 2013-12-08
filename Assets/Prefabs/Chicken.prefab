@@ -11,11 +11,11 @@ GameObject:
   - 114: {fileID: 11400008}
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400004}
-  - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
   - 135: {fileID: 13500000}
   - 54: {fileID: 5400000}
   - 114: {fileID: 11400010}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Untagged
@@ -48,7 +48,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.37766266, y: 0, z: 0}
+  m_LocalPosition: {x: 1.17475319, y: 0, z: .575888276}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -127,25 +127,24 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce27b6d1ae2cd2b42ac2dc38799f43f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
+  Speed: 6
   EscapeRadius: 15
-  PlayerAvoidanceWeight: 4
-  PlayerAvoidanceRadius: 3
-  Origin: {fileID: 0}
+  PlayerAvoidanceWeight: 3
+  PlayerAvoidanceRadius: 6
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb96dbb934732f94389fd9f707dade16, type: 3}
+  m_Script: {fileID: 11500000, guid: b0bdeefff81d73e4b99c11f13f86faef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11400004
@@ -188,13 +187,15 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2c216a986cec3c4896293aeec4d3161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
   reachedDestDist: .200000003
+  turnCoeefficient: 8
+  finished: 0
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
