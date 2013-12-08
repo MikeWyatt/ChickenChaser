@@ -34,7 +34,7 @@ static var madeFence:boolean=false;
 function Start () {
 	if (madeFence==false) {
 		madeFence=true;
-		fenceRadius=3.75f;
+		fenceRadius=FenceControl.staticFenceRadius;
 	}
 	
 	bodyStartingColor=bodyGraphic.material.color;
