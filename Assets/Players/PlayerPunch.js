@@ -14,6 +14,7 @@ var punchKnockback:float;
 var bodyPunchColor:Color;
 var bodyCooldownColor:Color;
 var animator:Animator;
+var featherPoofEffect:GameObject;
 var swishSound:AudioSource;
 var hitSound:AudioSource;
 
@@ -131,6 +132,7 @@ function Update () {
 		for (i=0;i<chickenHits.length;i++) {
 			cChicken=chickenHits[i].GetComponent(Chicken);
 			cChicken.rigidbody.velocity+=Utilities.Vector2To3(punchDir)*2f;
+			Instantiate(featherPoofEffect,cChicken.transform.position+Vector3.up*.5f,Quaternion.Euler(-90f,0f,0f));
 			hitPlayer=true;
 		}
 		

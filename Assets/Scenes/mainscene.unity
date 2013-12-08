@@ -1666,6 +1666,10 @@ Prefab:
       propertyPath: swishSound
       value: 
       objectReference: {fileID: 1390112842}
+    - target: {fileID: 11400006, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
+      propertyPath: featherPoofEffect
+      value: 
+      objectReference: {fileID: 100000, guid: 959128634bd8319499709a7c4feb073f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_RootGameObject: {fileID: 1390112836}
@@ -2607,6 +2611,7 @@ MonoBehaviour:
   bodyPunchColor: {r: 1, g: 0, b: 0, a: 0}
   bodyCooldownColor: {r: .0942366049, g: .610294104, b: .528657854, a: 0}
   animator: {fileID: 1460236427}
+  featherPoofEffect: {fileID: 100000, guid: 959128634bd8319499709a7c4feb073f, type: 2}
   swishSound: {fileID: 782447530}
   hitSound: {fileID: 782447531}
   position: {x: 0, y: 0}
@@ -3259,6 +3264,10 @@ Prefab:
       propertyPath: hitSound
       value: 
       objectReference: {fileID: 782447531}
+    - target: {fileID: 11400006, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
+      propertyPath: featherPoofEffect
+      value: 
+      objectReference: {fileID: 100000, guid: 959128634bd8319499709a7c4feb073f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_RootGameObject: {fileID: 782447524}
@@ -3763,6 +3772,7 @@ MonoBehaviour:
   bodyPunchColor: {r: 1, g: 0, b: 0, a: 0}
   bodyCooldownColor: {r: .0942366049, g: .610294104, b: .528657854, a: 0}
   animator: {fileID: 1750211523}
+  featherPoofEffect: {fileID: 100000, guid: 959128634bd8319499709a7c4feb073f, type: 2}
   swishSound: {fileID: 939729745}
   hitSound: {fileID: 939729744}
   position: {x: 0, y: 0}
@@ -4189,6 +4199,10 @@ Prefab:
       propertyPath: hitSound
       value: 
       objectReference: {fileID: 939729744}
+    - target: {fileID: 11400006, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
+      propertyPath: featherPoofEffect
+      value: 
+      objectReference: {fileID: 100000, guid: 959128634bd8319499709a7c4feb073f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_RootGameObject: {fileID: 939729738}
@@ -5248,6 +5262,7 @@ MonoBehaviour:
   bodyPunchColor: {r: 1, g: 0, b: 0, a: 0}
   bodyCooldownColor: {r: .0942366049, g: .610294104, b: .528657854, a: 0}
   animator: {fileID: 1000260196}
+  featherPoofEffect: {fileID: 100000, guid: 959128634bd8319499709a7c4feb073f, type: 2}
   swishSound: {fileID: 1175642178}
   hitSound: {fileID: 1175642179}
   position: {x: 0, y: 0}
@@ -5854,6 +5869,10 @@ Prefab:
       propertyPath: swishSound
       value: 
       objectReference: {fileID: 1175642178}
+    - target: {fileID: 11400006, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
+      propertyPath: featherPoofEffect
+      value: 
+      objectReference: {fileID: 100000, guid: 959128634bd8319499709a7c4feb073f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_RootGameObject: {fileID: 1175642172}
@@ -6369,6 +6388,7 @@ MonoBehaviour:
   bodyPunchColor: {r: 1, g: 0, b: 0, a: 0}
   bodyCooldownColor: {r: .0942366049, g: .610294104, b: .528657854, a: 0}
   animator: {fileID: 2084287486}
+  featherPoofEffect: {fileID: 100000, guid: 959128634bd8319499709a7c4feb073f, type: 2}
   swishSound: {fileID: 1390112842}
   hitSound: {fileID: 1390112843}
   position: {x: 0, y: 0}
