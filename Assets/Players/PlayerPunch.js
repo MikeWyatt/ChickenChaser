@@ -14,6 +14,8 @@ var punchKnockback:float;
 var bodyPunchColor:Color;
 var bodyCooldownColor:Color;
 var animator:Animator;
+var swishSound:AudioSource;
+var hitSound:AudioSource;
 
 @HideInInspector
 var position:Vector2;
@@ -114,7 +116,11 @@ function Update () {
 			if (allPlayers[i]!= gameObject.GetComponent(PlayerMovement)) {
 				var attackVector:Vector3=allPlayers[i].myCollider.transform.position-punchHitbox.transform.position;
 				if (attackVector.magnitude<punchRadius) {
+					
 					//I JUST PUNCHED SOMEONE
+					if (!hitSound.isPlaying) hitSound.Play();
+
+
 					allPlayers[i].position+=punchDir*punchKnockback;
 					allPlayers[i].stunTimer=1f;
 					hitPlayer=true;
@@ -130,6 +136,7 @@ function Update () {
 		
 		if (hitPlayer==false) {
 			//A SWING AND A MISS
+			if (!swishSound.isPlaying) swishSound.Play();
 		}
 		
 		//punchHitbox.enabled=true;

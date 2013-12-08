@@ -11,6 +11,7 @@ var turnSmooth:float;
 var fenceWidth:float;
 var myCollider:Collider;
 var animator:Animator;
+var runningSound:AudioSource;
 
 @HideInInspector
 var position:Vector2;
@@ -83,6 +84,11 @@ function Update () {
 	if (inputDir.magnitude>1f) inputDir=inputDir.normalized;
 	if (inputDir.magnitude>0f) {
 		facingDirection=Utilities.Vector2To3(inputDir);
+
+		if (!runningSound.isPlaying){
+			runningSound.Play();
+		}
+
 	}
 	
 	if(animator) {
