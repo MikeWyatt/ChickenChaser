@@ -29,5 +29,6 @@ public class PlayerDrop : MonoBehaviour {
 		Debug.Log (string.Format ("Player {0} scores!", Score.gameObject.name));
 		ParticleSystem go = (ParticleSystem)Instantiate(Particles);
 		go.transform.parent = transform;
+		go.transform.localPosition = Vector3.zero;
 	}
 }

@@ -839,6 +839,7 @@ GameObject:
   - 33: {fileID: 285950422}
   - 65: {fileID: 285950421}
   - 23: {fileID: 285950420}
+  - 114: {fileID: 285950424}
   m_Layer: 0
   m_Name: Player 2 Drop
   m_TagString: Untagged
@@ -874,10 +875,10 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 285950419}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &285950422
 MeshFilter:
@@ -897,6 +898,19 @@ Transform:
   m_LocalScale: {x: 2, y: 1.5, z: 2}
   m_Children: []
   m_Father: {fileID: 608124921}
+--- !u!114 &285950424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 285950419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d7b9f01d6695c40a4d8670de4cda73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Score: {fileID: 939729747}
+  Particles: {fileID: 19800000, guid: db8d30df0e9fba145b2f1dce38ed312b, type: 2}
 --- !u!1 &295055327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,6 +1522,7 @@ GameObject:
   - 33: {fileID: 495430172}
   - 65: {fileID: 495430171}
   - 23: {fileID: 495430170}
+  - 114: {fileID: 495430173}
   m_Layer: 0
   m_Name: Player 1 Drop
   m_TagString: Untagged
@@ -1554,10 +1569,10 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 495430168}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &495430172
 MeshFilter:
@@ -1566,6 +1581,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 495430168}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &495430173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 495430168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d7b9f01d6695c40a4d8670de4cda73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Score: {fileID: 1390112845}
+  Particles: {fileID: 19800000, guid: db8d30df0e9fba145b2f1dce38ed312b, type: 2}
 --- !u!1 &500088803
 GameObject:
   m_ObjectHideFlags: 0
@@ -1824,6 +1852,7 @@ GameObject:
   - 33: {fileID: 543122141}
   - 65: {fileID: 543122140}
   - 23: {fileID: 543122139}
+  - 114: {fileID: 543122142}
   m_Layer: 0
   m_Name: Player 3 Drop
   m_TagString: Untagged
@@ -1870,10 +1899,10 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 543122137}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &543122141
 MeshFilter:
@@ -1882,6 +1911,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 543122137}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &543122142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 543122137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d7b9f01d6695c40a4d8670de4cda73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Score: {fileID: 1175642181}
+  Particles: {fileID: 19800000, guid: db8d30df0e9fba145b2f1dce38ed312b, type: 2}
 --- !u!1 &557148777
 GameObject:
   m_ObjectHideFlags: 0
@@ -2569,6 +2611,7 @@ GameObject:
   - 82: {fileID: 782447532}
   - 82: {fileID: 782447531}
   - 82: {fileID: 782447530}
+  - 114: {fileID: 782447533}
   m_Layer: 0
   m_Name: Player 0
   m_TagString: Untagged
@@ -2853,6 +2896,18 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &782447533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 782447524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b99a752f3e0ce419cdaea11ddf8384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Value: 0
 --- !u!1 &798757808
 GameObject:
   m_ObjectHideFlags: 0
@@ -3734,6 +3789,7 @@ GameObject:
   - 82: {fileID: 939729746}
   - 82: {fileID: 939729744}
   - 82: {fileID: 939729745}
+  - 114: {fileID: 939729747}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Untagged
@@ -4018,6 +4074,18 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &939729747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 939729738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b99a752f3e0ce419cdaea11ddf8384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Value: 0
 --- !u!1 &940813429
 GameObject:
   m_ObjectHideFlags: 0
@@ -5228,6 +5296,7 @@ GameObject:
   - 82: {fileID: 1175642180}
   - 82: {fileID: 1175642179}
   - 82: {fileID: 1175642178}
+  - 114: {fileID: 1175642181}
   m_Layer: 0
   m_Name: Player 3
   m_TagString: Untagged
@@ -5512,6 +5581,18 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &1175642181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1175642172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b99a752f3e0ce419cdaea11ddf8384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Value: 0
 --- !u!1 &1198406396
 GameObject:
   m_ObjectHideFlags: 0
@@ -5539,7 +5620,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0901d7a89629646be481288f6fe40d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumPlayers: 4
+  Scores:
+  - {fileID: 782447533}
+  - {fileID: 1390112845}
+  - {fileID: 939729747}
+  - {fileID: 1175642181}
   PauseTexture: {fileID: 2800000, guid: 213634e573ce9f74eb6b35e6f9e386f6, type: 3}
 --- !u!4 &1198406398
 Transform:
@@ -6344,6 +6429,7 @@ GameObject:
   - 82: {fileID: 1390112844}
   - 82: {fileID: 1390112843}
   - 82: {fileID: 1390112842}
+  - 114: {fileID: 1390112845}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Untagged
@@ -6628,6 +6714,18 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &1390112845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390112836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b99a752f3e0ce419cdaea11ddf8384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Value: 0
 --- !u!1 &1394123391
 GameObject:
   m_ObjectHideFlags: 0
@@ -7968,6 +8066,7 @@ GameObject:
   - 33: {fileID: 1741730781}
   - 65: {fileID: 1741730780}
   - 23: {fileID: 1741730779}
+  - 114: {fileID: 1741730782}
   m_Layer: 0
   m_Name: Player 0 Drop
   m_TagString: Untagged
@@ -8014,10 +8113,10 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1741730777}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1741730781
 MeshFilter:
@@ -8026,6 +8125,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1741730777}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1741730782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1741730777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d7b9f01d6695c40a4d8670de4cda73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Score: {fileID: 782447533}
+  Particles: {fileID: 19800000, guid: db8d30df0e9fba145b2f1dce38ed312b, type: 2}
 --- !u!1 &1748198900
 GameObject:
   m_ObjectHideFlags: 0

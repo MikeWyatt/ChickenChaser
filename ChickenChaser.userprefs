@@ -2,12 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Plugins\Scripts\PlayerDrop.cs">
     <Files>
-      <File FileName="ChickenChaser.sln" Line="1" Column="1" />
-      <File FileName="Assets\Plugins\Scripts\PlayerDrop.cs" Line="5" Column="2" />
-      <File FileName="Assets\Players\PlayerPickupChicks.js" Line="1" Column="1" />
-      <File FileName="Assets\Players\PlayerPunch.js" Line="1" Column="1" />
-      <File FileName="Assets\Players\PlayerMovement.js" Line="1" Column="1" />
-      <File FileName="Assets\Plugins\Scripts\Chicken\RunningBehavior.cs" Line="34" Column="3" />
+      <File FileName="Assets\Plugins\Scripts\PlayerDrop.cs" Line="30" Column="39" />
+      <File FileName="Assets\Plugins\Scripts\PlayerScore.cs" Line="6" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
