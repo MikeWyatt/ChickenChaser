@@ -16,8 +16,8 @@ public class ThrownBehavior : MonoBehaviour, IChickenBehavior {
 		endPos = gameObject.transform.position 
 			+ gameObject.transform.forward * throwDistance;
 		
-		Debug.Log(startPos);
-		Debug.Log(endPos);
+//		Debug.Log(startPos);
+//		Debug.Log(endPos);
 	}
 	
 	// Update is called once per frame
