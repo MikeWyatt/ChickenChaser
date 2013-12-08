@@ -12,8 +12,9 @@ var punchHitbox:Renderer;
 var myCollider:Collider;
 var maxPunchCharge:float;
 var punchHitTime:float;
-var punchMinCooldown:float;
-var punchMaxCooldown:float;
+var punchCooldownTime:float;
+var punchRadius:float;
+var punchKnockback:float;
 var bodyPunchColor:Color;
 var bodyCooldownColor:Color;
 
@@ -42,6 +43,7 @@ function Start () {
 	var i:int;
 	
 	if (doneInit==false) {
+		doneInit=true;
 		allPlayers=new List.<PlayerControl>();
 	}
 	allPlayers.Add(this);
@@ -78,6 +80,7 @@ function Start () {
 
 function Update () {
 	var i:int;
+	var j:int;
 	var inputDir:Vector2=new Vector2(Input.GetAxis(inputPrefix+"Horizontal"),Input.GetAxis(inputPrefix+"Vertical"))*2f;
 	if (inputDir.magnitude>1f) inputDir=inputDir.normalized;
 	if (inputDir.magnitude>0f) {
@@ -111,12 +114,7 @@ function Update () {
 		if (punchCooldown<=0f) {
 			punchHitTimer=punchHitTime;
 			punchStrength=1f;
-			punchCooldown=punchMaxCooldown;
-			for (i=0;i<allPlayers.Count;i++) {
-				if (allPlayers[i]!=this) {
-					
-				}
-			}
+			punchCooldown=punchCooldownTime;
 		}
 		/*if (punching==false) {
 			if (punchCooldown<=0f) {
@@ -138,7 +136,7 @@ function Update () {
 			punching=false;
 			punchHitTimer=punchHitTime;
 			punchStrength=punchTimer/maxPunchCharge;
-			punchCooldown=Mathf.Lerp(punchMinCooldown,punchMaxCooldown,punchStrength);
+			//punchCooldown=Mathf.Lerp(punchMinCooldown,punchMaxCooldown,punchStrength);
 			punchTimer=0f;
 		}
 	}
@@ -146,6 +144,15 @@ function Update () {
 	bodyGraphic.material.color=Color.Lerp(bodyStartingColor,bodyPunchColor,punchTimer/maxPunchCharge);
 	
 	if (punchHitTimer>0f) {
+		for (i=0;i<allPlayers.Count;i++) {
+			if (allPlayers[i]!=this) {
+				var attackVector:Vector3=allPlayers[i].myCollider.transform.position-punchHitbox.transform.position;
+				if (attackVector.magnitude<punchRadius) {
+					var punchDir:Vector2=Utilities.Vector3To2(punchHitbox.transform.position-transform.position).normalized;
+					allPlayers[i].position+=punchDir*punchKnockback;
+				}
+			}
+		}
 		punchHitbox.enabled=true;
 		punchHitTimer-=Time.deltaTime;
 	} else {
@@ -155,6 +162,19 @@ function Update () {
 			punchCooldown-=Time.deltaTime;
 			if (punchCooldown<=0f) {
 				bodyGraphic.material.color=bodyStartingColor;
+			}
+		}
+	}
+	
+	if (playerIndex==0) {
+		for (i=0;i<allPlayers.Count;i++) {
+			for (j=i+1;j<allPlayers.Count;j++) {
+				var diffVector:Vector2=allPlayers[i].position-allPlayers[j].position;
+				if (diffVector.sqrMagnitude<1f) {
+					var extra:float=1f-diffVector.magnitude;
+					allPlayers[i].position+=diffVector.normalized*extra*.5f;
+					allPlayers[j].position-=diffVector.normalized*extra*.5f;
+				}
 			}
 		}
 	}
