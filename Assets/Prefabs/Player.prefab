@@ -1740,6 +1740,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerIndex: 0
+  bodyGraphic: {fileID: 13700000}
+  stunColor: {r: .396178871, g: .742647052, b: .196583048, a: 0}
   moveSpeed: 6
   movementSmooth: 8
   turnSmooth: 3
@@ -1762,7 +1764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerIndex: 0
-  bodyGraphic: {fileID: 2300002}
+  bodyGraphic: {fileID: 13700000}
   punchHitbox: {fileID: 2300000}
   myCollider: {fileID: 13500000}
   maxPunchCharge: 1.5

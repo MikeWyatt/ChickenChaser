@@ -115,6 +115,7 @@ function Update () {
 				var attackVector:Vector3=allPlayers[i].myCollider.transform.position-punchHitbox.transform.position;
 				if (attackVector.magnitude<punchRadius) {
 					allPlayers[i].position+=punchDir*punchKnockback;
+					allPlayers[i].stunTimer=1f;
 					hitPlayer=true;
 				}
 			}
@@ -134,10 +135,10 @@ function Update () {
 	} else {
 		//punchHitbox.enabled=false;
 		if (punchCooldown>0f) {
-			bodyGraphic.material.color=bodyCooldownColor;
+			//bodyGraphic.material.color=bodyCooldownColor;
 			punchCooldown-=Time.deltaTime;
 			if (punchCooldown<=0f) {
-				bodyGraphic.material.color=bodyStartingColor;
+				//bodyGraphic.material.color=bodyStartingColor;
 			}
 		}
 		if(animator) {

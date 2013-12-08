@@ -3,6 +3,8 @@
 import System.Collections.Generic;
 
 var playerIndex:int;
+var bodyGraphic:Renderer;
+var stunColor:Color;
 var moveSpeed:float;
 var movementSmooth:float;
 var turnSmooth:float;
@@ -67,6 +69,16 @@ function Update () {
 	var chickenHits:Collider[];
 	// Grab movement axis
 	var inputDir:Vector2=new Vector2(Input.GetAxis(inputPrefix+"Horizontal"),Input.GetAxis(inputPrefix+"Vertical"))*2f;
+	if (stunTimer>0f) {
+		stunTimer-=Time.deltaTime;
+		if (stunTimer<0f) {
+			stunTimer=0f;
+		}
+		inputDir=Vector2.zero;
+		bodyGraphic.material.color=stunColor;
+	} else {
+		bodyGraphic.material.color=Color.white;
+	}
 	if (inputDir.magnitude>1f) inputDir=inputDir.normalized;
 	if (inputDir.magnitude>0f) {
 		facingDirection=Utilities.Vector2To3(inputDir);
