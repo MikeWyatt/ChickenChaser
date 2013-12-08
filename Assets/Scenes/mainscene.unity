@@ -408,6 +408,8 @@ GameObject:
   - 4: {fileID: 221204682}
   - 114: {fileID: 221204683}
   - 114: {fileID: 221204685}
+  - 114: {fileID: 221204684}
+  - 114: {fileID: 221204686}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -443,20 +445,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerIndex: 1
+  punchHitbox: {fileID: 74011451}
+  animator: {fileID: 1200877236}
+  inputPrefix: 
+--- !u!114 &221204684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 221204681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be48f3bf3cee1a448db07e5ebbb9784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerIndex: 1
   moveSpeed: 6
   movementSmooth: 8
   turnSmooth: 6
   fenceWidth: .5
-  bodyGraphic: {fileID: 687458998}
-  punchHitbox: {fileID: 74011451}
   myCollider: {fileID: 687458999}
-  maxPunchCharge: 1.5
-  punchHitTime: .0500000007
-  punchCooldownTime: .100000001
-  punchRadius: 1
-  punchKnockback: .5
-  bodyPunchColor: {r: .947761178, g: .0778012797, b: .0778012797, a: 1}
-  bodyCooldownColor: {r: .220047608, g: .489728242, b: .544117689, a: 1}
   animator: {fileID: 1200877236}
   position: {x: 0, y: 0}
   inputPrefix: 
@@ -474,6 +482,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b32e472494bb814c8073561c64a888f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &221204686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 221204681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f49a3992d84f8634089dff463f7a1766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerIndex: 1
+  bodyGraphic: {fileID: 687458998}
+  punchHitbox: {fileID: 74011451}
+  myCollider: {fileID: 687458999}
+  maxPunchCharge: 0
+  punchHitTime: .0500000007
+  punchCooldownTime: .100000001
+  punchRadius: 1
+  punchKnockback: .5
+  bodyPunchColor: {r: 1, g: 0, b: 0, a: 0}
+  bodyCooldownColor: {r: .079746969, g: .360566229, b: .433823526, a: 0}
+  animator: {fileID: 1200877236}
+  position: {x: 0, y: 0}
+  inputPrefix: 
+  health: 1
+  stunTimer: 0
 --- !u!1 &260033283
 GameObject:
   m_ObjectHideFlags: 0
@@ -2637,6 +2672,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: de5ad643a50e35f49aed4fadf309c541, type: 2}
+    - target: {fileID: 11400000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f95ed7b4f0342945897a87d08a139d3, type: 2}
   m_RootGameObject: {fileID: 1390112836}
@@ -2924,6 +2963,8 @@ GameObject:
   - 4: {fileID: 1390112838}
   - 114: {fileID: 1390112837}
   - 114: {fileID: 1390112840}
+  - 114: {fileID: 1390112839}
+  - 114: {fileID: 1390112841}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2944,25 +2985,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerIndex: 0
-  moveSpeed: 6
-  movementSmooth: 8
-  turnSmooth: 6
-  fenceWidth: .5
-  bodyGraphic: {fileID: 1643477493}
   punchHitbox: {fileID: 1449277299}
-  myCollider: {fileID: 1643477495}
-  maxPunchCharge: 1.5
-  punchHitTime: .0500000007
-  punchCooldownTime: .100000001
-  punchRadius: 1
-  punchKnockback: .5
-  bodyPunchColor: {r: .947761178, g: .0778012797, b: .0778012797, a: 1}
-  bodyCooldownColor: {r: .220047608, g: .489728242, b: .544117689, a: 1}
   animator: {fileID: 2084287486}
-  position: {x: 0, y: 0}
   inputPrefix: 
-  health: 1
-  stunTimer: 0
 --- !u!4 &1390112838
 Transform:
   m_ObjectHideFlags: 0
@@ -2978,6 +3003,28 @@ Transform:
   - {fileID: 1643477494}
   - {fileID: 2084287485}
   m_Father: {fileID: 0}
+--- !u!114 &1390112839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390112836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be48f3bf3cee1a448db07e5ebbb9784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerIndex: 0
+  moveSpeed: 6
+  movementSmooth: 8
+  turnSmooth: 3
+  fenceWidth: .5
+  myCollider: {fileID: 1643477495}
+  animator: {fileID: 2084287486}
+  position: {x: 0, y: 0}
+  inputPrefix: 
+  health: 1
+  stunTimer: 0
 --- !u!114 &1390112840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2990,6 +3037,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b32e472494bb814c8073561c64a888f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1390112841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390112836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f49a3992d84f8634089dff463f7a1766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerIndex: 0
+  bodyGraphic: {fileID: 1643477493}
+  punchHitbox: {fileID: 1449277299}
+  myCollider: {fileID: 1643477495}
+  maxPunchCharge: 1.5
+  punchHitTime: .0500000007
+  punchCooldownTime: .100000001
+  punchRadius: 1
+  punchKnockback: .5
+  bodyPunchColor: {r: 1, g: 0, b: 0, a: 0}
+  bodyCooldownColor: {r: .0942366049, g: .610294104, b: .528657854, a: 0}
+  animator: {fileID: 2084287486}
+  position: {x: 0, y: 0}
+  inputPrefix: 
+  health: 1
+  stunTimer: 0
 --- !u!1 &1395492056
 GameObject:
   m_ObjectHideFlags: 0

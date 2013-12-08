@@ -33,14 +33,14 @@ private var punchStrength:float;
 private var bodyStartingColor:Color;
 
 static var doneInit:boolean=false;
-static var allPlayers:List.<PlayerPunch>;
+static var allPlayers:List.<PlayerMovement>;
 
 function Start () {	
 	if (doneInit==false) {
 		doneInit=true;
-		allPlayers=new List.<PlayerPunch>();
+		allPlayers=new List.<PlayerMovement>();
 	}
-	allPlayers.Add(this);
+	allPlayers.Add(gameObject.GetComponent(PlayerMovement));
 	
 	/*if (doneInit==false) {
 		doneInit=true;
@@ -111,7 +111,7 @@ function Update () {
 	if (punchHitTimer>0f) {
 		var hitPlayer:boolean=false;
 		for (i=0;i<allPlayers.Count;i++) {
-			if (allPlayers[i]!=this) {
+			if (allPlayers[i]!= gameObject.GetComponent(PlayerMovement)) {
 				var attackVector:Vector3=allPlayers[i].myCollider.transform.position-punchHitbox.transform.position;
 				if (attackVector.magnitude<punchRadius) {
 					allPlayers[i].position+=punchDir*punchKnockback;
