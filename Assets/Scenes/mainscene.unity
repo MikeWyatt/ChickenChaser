@@ -1161,7 +1161,7 @@ GameObject:
   - 23: {fileID: 941039409}
   m_Layer: 0
   m_Name: West Wall
-  m_TagString: Wall
+  m_TagString: Escape Zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2031,7 +2031,7 @@ GameObject:
   - 23: {fileID: 1431818451}
   m_Layer: 0
   m_Name: North Wall
-  m_TagString: Wall
+  m_TagString: Escape Zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2361,7 +2361,7 @@ GameObject:
   - 23: {fileID: 1695168300}
   m_Layer: 0
   m_Name: South Wall
-  m_TagString: Wall
+  m_TagString: Escape Zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3166,7 +3166,7 @@ GameObject:
   - 23: {fileID: 2132304060}
   m_Layer: 0
   m_Name: East Wall
-  m_TagString: Wall
+  m_TagString: Escape Zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
