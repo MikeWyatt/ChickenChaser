@@ -34,6 +34,7 @@ private var punchCooldown:float=0f;
 private var punchHitTimer:float=0f;
 private var punchStrength:float;
 private var bodyStartingColor:Color;
+private var grabbedChicken:Chicken;
 
 static var playBounds:Rect;
 static var doneInit:boolean=false;
@@ -81,6 +82,8 @@ function Start () {
 function Update () {
 	var i:int;
 	var j:int;
+	var cChicken:Chicken;
+	var chickenHits:Collider[];
 	var inputDir:Vector2=new Vector2(Input.GetAxis(inputPrefix+"Horizontal"),Input.GetAxis(inputPrefix+"Vertical"))*2f;
 	if (inputDir.magnitude>1f) inputDir=inputDir.normalized;
 	if (inputDir.magnitude>0f) {
@@ -155,9 +158,9 @@ function Update () {
 				}
 			}
 		}
-		var chickenHits:Collider[]=Physics.OverlapSphere(punchHitbox.transform.position,.5f,1<<8);
+		chickenHits=Physics.OverlapSphere(punchHitbox.transform.position,.5f,1<<8);
 		for (i=0;i<chickenHits.length;i++) {
-			var cChicken:Chicken=chickenHits[i].GetComponent(Chicken);
+			cChicken=chickenHits[i].GetComponent(Chicken);
 			cChicken.rigidbody.velocity+=Utilities.Vector2To3(punchDir)*2f;
 		}
 		
@@ -171,6 +174,26 @@ function Update () {
 			if (punchCooldown<=0f) {
 				bodyGraphic.material.color=bodyStartingColor;
 			}
+		}
+	}
+	
+	if (grabbedChicken==null) {
+		if (Input.GetButtonDown(inputPrefix+"Fire2")) {
+			chickenHits=Physics.OverlapSphere(punchHitbox.transform.position,.5f,1<<8);
+			if (chickenHits.length>0) {
+				cChicken=chickenHits[0].GetComponent(Chicken);
+				grabbedChicken=cChicken;
+				cChicken.ChangeBehavior.<HeldBehavior>();
+				cChicken.GetComponent(HeldBehavior).Holder=gameObject;
+			}
+		}
+	} else {
+		if (Input.GetButtonDown(inputPrefix+"Fire2")) {
+			grabbedChicken.ChangeBehavior.<ThrownBehavior>();
+			grabbedChicken.GetComponent(HeldBehavior).Holder=null;
+			grabbedChicken.rigidbody.velocity.y=0f;
+			grabbedChicken.GetComponent(ThrownBehavior).SetThrowArc();
+			grabbedChicken=null;
 		}
 	}
 	
