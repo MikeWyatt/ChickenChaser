@@ -4,7 +4,7 @@ using System.Collections;
 public class HeldBehavior : MonoBehaviour, IChickenBehavior {
 
 	public GameObject Holder { get; set; }
-	public float HoldHeight = 3f;
+	public float HoldHeight = 1f;
 
 	// Update is called once per frame
 	public void Update () 
@@ -13,5 +13,6 @@ public class HeldBehavior : MonoBehaviour, IChickenBehavior {
 			Holder.transform.position.x,
 			HoldHeight,
 			Holder.transform.position.z);
+		transform.rotation = Holder.transform.rotation;
 	}
 }
