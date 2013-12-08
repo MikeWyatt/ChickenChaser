@@ -2033,6 +2033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fenceRadius: 4
+  outerFenceRadius: 10
   fencePieceLength: 1.5
   fencePiecePrefab: {fileID: 100004, guid: 3fc8c627511eae14fa2120d3d2398790, type: 2}
 --- !u!1 &2132304058

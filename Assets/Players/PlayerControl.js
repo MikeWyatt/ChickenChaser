@@ -27,13 +27,12 @@ private var punchHitTimer:float=0f;
 private var punchStrength:float;
 private var bodyStartingColor:Color;
 
-static var fenceRadius:float;
 static var playBounds:Rect;
 static var doneInit:boolean=false;
 
 function Start () {
 	var i:int;
-	if (doneInit==false) {
+	/*if (doneInit==false) {
 		doneInit=true;
 		fenceRadius=FenceControl.staticFenceRadius;
 		var boundaryObjects:GameObject[]=GameObject.FindGameObjectsWithTag("Escape Zone");
@@ -54,7 +53,7 @@ function Start () {
 					break;
 			}
 		}
-	}
+	}*/
 	
 	bodyStartingColor=bodyGraphic.material.color;
 	position=Utilities.Vector3To2(transform.position);
@@ -70,10 +69,13 @@ function Update () {
 	transform.rotation=Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(facingDirection,Vector3.up),turnSmooth*Time.deltaTime);
 	position+=inputDir*moveSpeed*Time.deltaTime;
 	
-	if (position.magnitude<(fenceRadius+fenceWidth)) {
-		position=position.normalized*(fenceRadius+fenceWidth);
+	if (position.magnitude<(FenceControl.staticFenceRadius+fenceWidth)) {
+		position=position.normalized*(FenceControl.staticFenceRadius+fenceWidth);
 	}
-	if (position.x>playBounds.xMax-fenceWidth) {
+	if (position.magnitude>(FenceControl.staticOuterFenceRadius-fenceWidth)) {
+		position=position.normalized*(FenceControl.staticOuterFenceRadius-fenceWidth);
+	}
+	/*if (position.x>playBounds.xMax-fenceWidth) {
 		position.x=playBounds.xMax-fenceWidth;
 	}
 	if (position.x<playBounds.xMin+fenceWidth) {
@@ -84,7 +86,7 @@ function Update () {
 	}
 	if (position.y<playBounds.yMin+fenceWidth) {
 		position.y=playBounds.yMin+fenceWidth;
-	}
+	}*/
 	
 	transform.position=Vector3.Lerp(transform.position,Utilities.Vector2To3(position),movementSmooth*Time.deltaTime);
 	
