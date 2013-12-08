@@ -53,7 +53,7 @@ public class MoveWaypoints : MonoBehaviour {
 			}
 			gameObject.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), turnCoeefficient * Time.deltaTime);
 		}
-		else if (waypoints.Count > 0)
+		else if (waypoints == null || waypoints.Count > 0)
 		{
 			destination = waypoints.Dequeue();
 		}

@@ -17,8 +17,18 @@ public class ChickenSpawner : MonoBehaviour {
 		if (timeToSpawn <= 0)
 		{
 			timeToSpawn += timeToSpawn;
-			Instantiate(chickenPrefab);
+			Instantiate(chickenPrefab
+		                 , gameObject.transform.position
+		                 , gameObject.transform.rotation);
 			timeToSpawn += SPAWN_TIMER;
+		}
+	}
+
+	void OnCollisionEnter(Collision collider)
+	{
+		if (collider.gameObject.tag == "Ground")
+		{
+			gameObject.rigidbody.velocity = Vector3.zero;
 		}
 	}
 }

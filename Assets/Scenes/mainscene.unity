@@ -97,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1262434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 2.37649918, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -239,8 +239,9 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   maxPunchCharge: 1.5
   punchHitTime: .0500000007
-  punchMinCooldown: .200000003
-  punchMaxCooldown: .600000024
+  punchCooldownTime: 0
+  punchRadius: 0
+  punchKnockback: 0
   bodyPunchColor: {r: .947761178, g: .0778012797, b: .0778012797, a: 1}
   bodyCooldownColor: {r: .220047608, g: .489728242, b: .544117689, a: 1}
   position: {x: 0, y: 0}
@@ -775,7 +776,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400004, guid: 78858abbbbb52d24abf1755542d8daf7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .595629692
+      value: -3.94547749
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 78858abbbbb52d24abf1755542d8daf7, type: 2}
       propertyPath: m_LocalPosition.y
@@ -905,8 +906,9 @@ MonoBehaviour:
   myCollider: {fileID: 0}
   maxPunchCharge: 1.5
   punchHitTime: .0500000007
-  punchMinCooldown: .200000003
-  punchMaxCooldown: .600000024
+  punchCooldownTime: 0
+  punchRadius: 0
+  punchKnockback: 0
   bodyPunchColor: {r: .947761178, g: .0778012797, b: .0778012797, a: 1}
   bodyCooldownColor: {r: .220047608, g: .489728242, b: .544117689, a: 1}
   position: {x: 0, y: 0}
@@ -920,7 +922,7 @@ Transform:
   m_PrefabInternal: {fileID: 1368324327}
   m_GameObject: {fileID: 1390112836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .595629692, y: 0, z: 5.67069817}
+  m_LocalPosition: {x: -3.94547749, y: 0, z: 5.67069817}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1860999337}
@@ -951,7 +953,7 @@ GameObject:
   - 23: {fileID: 1395492058}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
